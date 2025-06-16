@@ -2,5 +2,5 @@
   "appTitle": "flutter_excercise",
   "@appTitle": {
     "description": "The title of the application"
-  },
+  }
 }
