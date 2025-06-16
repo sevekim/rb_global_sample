@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excercise/core/constants/style/color_constant/color_palette.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/bottom_paddings.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/left_bottom_right_paddings.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/top_paddings.dart';
+import 'package:flutter_excercise/core/style/color_constant/color_palette.dart';
+import 'package:flutter_excercise/core/style/padding_style/bottom_paddings.dart';
+import 'package:flutter_excercise/core/style/padding_style/left_bottom_right_paddings.dart';
+import 'package:flutter_excercise/core/style/padding_style/top_paddings.dart';
 import 'package:flutter_excercise/src/widgets/common_widget/button_widget/common_text_button.dart';
 
 class CommonErrorScreenWithWarning extends StatelessWidget {

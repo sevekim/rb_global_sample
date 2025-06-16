@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/all_side_paddings.dart';
+import 'package:flutter_excercise/core/style/padding_style/all_side_paddings.dart';
 import 'package:flutter_excercise/src/widgets/common_function/common_keyboard_unfocus.dart';
 
 class CommonScaffoldStructure extends StatelessWidget {

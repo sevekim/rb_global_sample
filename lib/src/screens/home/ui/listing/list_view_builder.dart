@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/horizontal_padding.dart';
+import 'package:flutter_excercise/core/style/padding_style/horizontal_padding.dart';
 import 'package:flutter_excercise/src/screens/home/core/logic/controller/list_view_builder/list_view_builder_controller.dart';
 import 'package:flutter_excercise/src/screens/home/core/logic/controller/list_view_indicator/list_view_builder_indicator_controller.dart';
 import 'package:flutter_excercise/src/screens/home/ui/listing/list_view_builder_content.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excercise/core/constants/style/border_style/border_radius_style.dart';
-import 'package:flutter_excercise/core/constants/style/button_style/button_style.dart';
-import 'package:flutter_excercise/core/constants/style/color_constant/color_palette.dart';
+import 'package:flutter_excercise/core/style/border_style/border_radius_style.dart';
+import 'package:flutter_excercise/core/style/button_style/button_style.dart';
+import 'package:flutter_excercise/core/style/color_constant/color_palette.dart';
 import 'package:flutter_excercise/src/widgets/common_widget/loading_widget/common_loading_circle.dart';
 
 class CommonTextButton extends StatelessWidget {

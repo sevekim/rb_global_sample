@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/bottom_paddings.dart';
+import 'package:flutter_excercise/core/style/padding_style/bottom_paddings.dart';
 import 'package:flutter_excercise/core/exceptions/errors/error_screen/error_screen.dart';
 import 'package:flutter_excercise/src/widgets/common_screen/error_screen/common_error_screen_with_warning.dart';
 import 'package:flutter_excercise/src/screens/home/core/logic/controller/list_view_indicator/list_view_builder_indicator_controller.dart';

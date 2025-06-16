@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excercise/core/constants/style/padding_style/all_side_paddings.dart';
+import 'package:flutter_excercise/core/style/padding_style/all_side_paddings.dart';
 
 class CommonErrorScreen extends StatelessWidget {
   final FlutterErrorDetails details;
