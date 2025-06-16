@@ -11,5 +11,7 @@ abstract class ListViewBuilderControllerState
     @Default(0) int listingCountsWhileInFetch,
     @Default(false) bool isFetching,
     @Default(true) bool hasMoreListings,
+    @Default(true) bool hasMore,
+    String? errorMessage,
   }) = _ListViewBuilderControllerState;
 }

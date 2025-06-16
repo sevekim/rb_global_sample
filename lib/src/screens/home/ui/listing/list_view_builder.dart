@@ -2,22 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_excercise/core/constants/style/padding_style/horizontal_padding.dart';
 import 'package:flutter_excercise/src/screens/home/core/logic/controller/list_view_builder/list_view_builder_controller.dart';
 import 'package:flutter_excercise/src/screens/home/core/logic/controller/list_view_indicator/list_view_builder_indicator_controller.dart';
-import 'package:flutter_excercise/src/screens/home/core/models/auction_record_model.dart';
 import 'package:flutter_excercise/src/screens/home/ui/listing/list_view_builder_content.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ListingViewBuilder extends ConsumerWidget {
-  final List<AuctionRecordModel> listingData;
   const ListingViewBuilder({
     super.key,
-    required this.listingData,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final listingList = ref.watch(
-      listViewBuilderControllerProvider(listingData),
-    );
+    final listingData = ref.read(listingViewBuilderControllerProvider).items;
 
     IndicatorStatus initialIndicatorStatus = IndicatorStatus.loading;
 
@@ -30,7 +25,7 @@ class ListingViewBuilder extends ConsumerWidget {
       onNotification: (ScrollNotification scrollInfo) {
         if (listingData.length > 19) {
           ref
-              .read(listViewBuilderControllerProvider(listingData).notifier)
+              .read(listingViewBuilderControllerProvider.notifier)
               .checkOnScrollInList(scrollInfo: scrollInfo);
         }
 
@@ -39,7 +34,6 @@ class ListingViewBuilder extends ConsumerWidget {
       child: Container(
         padding: commonHorizontalPadding16,
         child: ListViewListBuilderContent(
-          listingList: listingList.items,
           initialIndicatorStatus: initialIndicatorStatus,
         ),
       ),
