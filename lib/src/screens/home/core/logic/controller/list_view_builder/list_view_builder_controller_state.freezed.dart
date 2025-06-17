@@ -18,7 +18,6 @@ mixin _$ListViewBuilderControllerState {
   List<AuctionRecordModel> get items;
   int get listingCountsWhileInFetch;
   bool get isFetching;
-  bool get hasMoreListings;
   bool get hasMore;
   String? get errorMessage;
 
@@ -42,8 +41,6 @@ mixin _$ListViewBuilderControllerState {
                 other.listingCountsWhileInFetch == listingCountsWhileInFetch) &&
             (identical(other.isFetching, isFetching) ||
                 other.isFetching == isFetching) &&
-            (identical(other.hasMoreListings, hasMoreListings) ||
-                other.hasMoreListings == hasMoreListings) &&
             (identical(other.hasMore, hasMore) || other.hasMore == hasMore) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
@@ -55,13 +52,12 @@ mixin _$ListViewBuilderControllerState {
       const DeepCollectionEquality().hash(items),
       listingCountsWhileInFetch,
       isFetching,
-      hasMoreListings,
       hasMore,
       errorMessage);
 
   @override
   String toString() {
-    return 'ListViewBuilderControllerState(items: $items, listingCountsWhileInFetch: $listingCountsWhileInFetch, isFetching: $isFetching, hasMoreListings: $hasMoreListings, hasMore: $hasMore, errorMessage: $errorMessage)';
+    return 'ListViewBuilderControllerState(items: $items, listingCountsWhileInFetch: $listingCountsWhileInFetch, isFetching: $isFetching, hasMore: $hasMore, errorMessage: $errorMessage)';
   }
 }
 
@@ -76,7 +72,6 @@ abstract mixin class $ListViewBuilderControllerStateCopyWith<$Res> {
       {List<AuctionRecordModel> items,
       int listingCountsWhileInFetch,
       bool isFetching,
-      bool hasMoreListings,
       bool hasMore,
       String? errorMessage});
 }
@@ -97,7 +92,6 @@ class _$ListViewBuilderControllerStateCopyWithImpl<$Res>
     Object? items = null,
     Object? listingCountsWhileInFetch = null,
     Object? isFetching = null,
-    Object? hasMoreListings = null,
     Object? hasMore = null,
     Object? errorMessage = freezed,
   }) {
@@ -113,10 +107,6 @@ class _$ListViewBuilderControllerStateCopyWithImpl<$Res>
       isFetching: null == isFetching
           ? _self.isFetching
           : isFetching // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasMoreListings: null == hasMoreListings
-          ? _self.hasMoreListings
-          : hasMoreListings // ignore: cast_nullable_to_non_nullable
               as bool,
       hasMore: null == hasMore
           ? _self.hasMore
@@ -138,7 +128,6 @@ class _ListViewBuilderControllerState
       {final List<AuctionRecordModel> items = const <AuctionRecordModel>[],
       this.listingCountsWhileInFetch = 0,
       this.isFetching = false,
-      this.hasMoreListings = true,
       this.hasMore = true,
       this.errorMessage})
       : _items = items;
@@ -158,9 +147,6 @@ class _ListViewBuilderControllerState
   @override
   @JsonKey()
   final bool isFetching;
-  @override
-  @JsonKey()
-  final bool hasMoreListings;
   @override
   @JsonKey()
   final bool hasMore;
@@ -187,8 +173,6 @@ class _ListViewBuilderControllerState
                 other.listingCountsWhileInFetch == listingCountsWhileInFetch) &&
             (identical(other.isFetching, isFetching) ||
                 other.isFetching == isFetching) &&
-            (identical(other.hasMoreListings, hasMoreListings) ||
-                other.hasMoreListings == hasMoreListings) &&
             (identical(other.hasMore, hasMore) || other.hasMore == hasMore) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
@@ -200,13 +184,12 @@ class _ListViewBuilderControllerState
       const DeepCollectionEquality().hash(_items),
       listingCountsWhileInFetch,
       isFetching,
-      hasMoreListings,
       hasMore,
       errorMessage);
 
   @override
   String toString() {
-    return 'ListViewBuilderControllerState(items: $items, listingCountsWhileInFetch: $listingCountsWhileInFetch, isFetching: $isFetching, hasMoreListings: $hasMoreListings, hasMore: $hasMore, errorMessage: $errorMessage)';
+    return 'ListViewBuilderControllerState(items: $items, listingCountsWhileInFetch: $listingCountsWhileInFetch, isFetching: $isFetching, hasMore: $hasMore, errorMessage: $errorMessage)';
   }
 }
 
@@ -223,7 +206,6 @@ abstract mixin class _$ListViewBuilderControllerStateCopyWith<$Res>
       {List<AuctionRecordModel> items,
       int listingCountsWhileInFetch,
       bool isFetching,
-      bool hasMoreListings,
       bool hasMore,
       String? errorMessage});
 }
@@ -244,7 +226,6 @@ class __$ListViewBuilderControllerStateCopyWithImpl<$Res>
     Object? items = null,
     Object? listingCountsWhileInFetch = null,
     Object? isFetching = null,
-    Object? hasMoreListings = null,
     Object? hasMore = null,
     Object? errorMessage = freezed,
   }) {
@@ -260,10 +241,6 @@ class __$ListViewBuilderControllerStateCopyWithImpl<$Res>
       isFetching: null == isFetching
           ? _self.isFetching
           : isFetching // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasMoreListings: null == hasMoreListings
-          ? _self.hasMoreListings
-          : hasMoreListings // ignore: cast_nullable_to_non_nullable
               as bool,
       hasMore: null == hasMore
           ? _self.hasMore

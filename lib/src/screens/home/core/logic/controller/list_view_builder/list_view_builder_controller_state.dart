@@ -10,7 +10,6 @@ abstract class ListViewBuilderControllerState
     @Default(<AuctionRecordModel>[]) List<AuctionRecordModel> items,
     @Default(0) int listingCountsWhileInFetch,
     @Default(false) bool isFetching,
-    @Default(true) bool hasMoreListings,
     @Default(true) bool hasMore,
     String? errorMessage,
   }) = _ListViewBuilderControllerState;

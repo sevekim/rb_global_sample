@@ -31,9 +31,7 @@ class ListingViewBuilderController
       if (!moreLeft) {
         ref
             .read(
-              listViewBuilderIndicatorControllerProvider(
-                IndicatorStatus.noMore,
-              ).notifier,
+              listViewBuilderIndicatorControllerProvider.notifier,
             )
             .updateIndicatorStatus(IndicatorStatus.noMore);
       }
@@ -43,9 +41,7 @@ class ListingViewBuilderController
         errorMessage: e.toString(),
       );
       ref
-          .read(listViewBuilderIndicatorControllerProvider(
-            IndicatorStatus.error,
-          ).notifier)
+          .read(listViewBuilderIndicatorControllerProvider.notifier)
           .updateIndicatorStatus(IndicatorStatus.error);
     }
   }
@@ -57,7 +53,7 @@ class ListingViewBuilderController
   }) async {
     final s = state;
     if (s.isFetching ||
-        !s.hasMoreListings ||
+        !s.hasMore ||
         s.listingCountsWhileInFetch == s.items.length) {
       return;
     }
@@ -77,9 +73,7 @@ class ListingViewBuilderController
       listingCountsWhileInFetch: state.items.length,
     );
     final indicator = ref.read(
-      listViewBuilderIndicatorControllerProvider(
-        IndicatorStatus.loading,
-      ).notifier,
+      listViewBuilderIndicatorControllerProvider.notifier,
     );
     try {
       final extra = await _fetchRecords(

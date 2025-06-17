@@ -15,7 +15,7 @@ class ListViewListBuilderIndicator extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final indicator = ref.watch(
-      listViewBuilderIndicatorControllerProvider(initialStatus),
+      listViewBuilderIndicatorControllerProvider,
     );
 
     return Container(
