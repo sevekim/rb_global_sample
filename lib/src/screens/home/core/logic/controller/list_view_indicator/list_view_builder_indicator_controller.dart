@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_renaming_method_parameters
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum IndicatorStatus {
@@ -7,10 +9,11 @@ enum IndicatorStatus {
   none,
 }
 
-class ListViewBuilderIndicatorController extends Notifier<IndicatorStatus> {
+class ListViewBuilderIndicatorController
+    extends FamilyNotifier<IndicatorStatus, IndicatorStatus?> {
   @override
-  IndicatorStatus build() {
-    return IndicatorStatus.loading;
+  IndicatorStatus build(IndicatorStatus? initial) {
+    return initial ?? IndicatorStatus.loading;
   }
 
   void updateIndicatorStatus(IndicatorStatus status) {
@@ -18,7 +21,7 @@ class ListViewBuilderIndicatorController extends Notifier<IndicatorStatus> {
   }
 }
 
-final listViewBuilderIndicatorControllerProvider =
-    NotifierProvider<ListViewBuilderIndicatorController, IndicatorStatus>(
+final listViewBuilderIndicatorControllerProvider = NotifierProvider.family<
+    ListViewBuilderIndicatorController, IndicatorStatus, IndicatorStatus?>(
   () => ListViewBuilderIndicatorController(),
 );

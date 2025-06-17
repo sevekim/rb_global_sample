@@ -31,7 +31,9 @@ class ListingViewBuilderController
       if (!moreLeft) {
         ref
             .read(
-              listViewBuilderIndicatorControllerProvider.notifier,
+              listViewBuilderIndicatorControllerProvider(
+                IndicatorStatus.noMore,
+              ).notifier,
             )
             .updateIndicatorStatus(IndicatorStatus.noMore);
       }
@@ -41,7 +43,9 @@ class ListingViewBuilderController
         errorMessage: e.toString(),
       );
       ref
-          .read(listViewBuilderIndicatorControllerProvider.notifier)
+          .read(listViewBuilderIndicatorControllerProvider(
+            IndicatorStatus.error,
+          ).notifier)
           .updateIndicatorStatus(IndicatorStatus.error);
     }
   }
@@ -73,7 +77,9 @@ class ListingViewBuilderController
       listingCountsWhileInFetch: state.items.length,
     );
     final indicator = ref.read(
-      listViewBuilderIndicatorControllerProvider.notifier,
+      listViewBuilderIndicatorControllerProvider(
+        IndicatorStatus.noMore,
+      ).notifier,
     );
     try {
       final extra = await _fetchRecords(
